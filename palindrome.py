@@ -16,3 +16,6 @@ class Solution(object):
             return True
 
     print(isPalindrome(12321))
+
+    # to run use: python3 palindrome.py
+    # output: True
