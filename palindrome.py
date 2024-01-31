@@ -11,6 +11,7 @@ class Solution(object):
         while (x > half):
             half = half * 10 + x % 10
             x = x // 10
+            print(half, x)
 
         if x == half or x == half // 10:
             return True
