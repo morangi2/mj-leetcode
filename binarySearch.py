@@ -2,7 +2,7 @@ def binarySearch(nums, target):
     left_pointer = 0
     right_pointer = len(nums) - 1
 
-    while left <= right:
+    while left_pointer <= right_pointer:
         mid = (left_pointer + right_pointer) // 2
 
         if nums[mid] == target:
