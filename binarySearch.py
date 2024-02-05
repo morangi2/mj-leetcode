@@ -8,9 +8,9 @@ def binarySearch(nums, target):
         if nums[mid] == target:
             return mid
         elif nums[mid] < target:
-            left = mid + 1
+            left_pointer = mid + 1
         else:
-            right = mid - 1
+            right_pointer = mid - 1
 
     return -1
 
