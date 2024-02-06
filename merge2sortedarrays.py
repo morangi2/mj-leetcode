@@ -34,3 +34,38 @@ def mergeSortedArray(nums1, m, nums2, n):
 
 # [1, 2, 2, 3, 5, 6]
 print(mergeSortedArray([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3))
+
+
+def mergeSortedArray2(nums1, m, nums2, n):
+    """
+    :type nums1: List[int]
+    :type m: int
+    :type nums2: List[int]
+    :type n: int
+    :rtype: List[int]
+    """
+    merged = []
+    pointer1 = 0
+    pointer2 = 0
+
+    while pointer1 < m and pointer2 < n:
+        if nums1[pointer1] <= nums2[pointer2]:
+            merged.append(nums1[pointer1])
+            pointer1 += 1
+        else:
+            merged.append(nums2[pointer2])
+            pointer2 += 1
+
+    while pointer1 < m:
+        merged.append(nums1[pointer1])
+        pointer1 += 1
+
+    while pointer2 < n:
+        merged.append(nums2[pointer2])
+        pointer2 += 1
+
+    return merged
+
+
+# [1, 2, 2, 3, 5, 6]
+print(mergeSortedArray2([1, 2, 3], 3, [2, 5, 6], 3))
