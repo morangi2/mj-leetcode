@@ -5,7 +5,7 @@ def exclusiveTime(n, logs):
     :rtype: List[int]
     """
     stack = []  # a list used as a stack data structure
-    response = [0] * n
+    response = [0] * n  # a list of size n with all elements initialized to 0
 
     for log in logs:
         fId, func, curr_time = log.split(":")
@@ -20,6 +20,7 @@ def exclusiveTime(n, logs):
             response[fn_id] += time_taken
 
             if stack:
+                # meaning the last function id in the stack was paused
                 response[stack[-1][0]] -= time_taken
 
     return response
@@ -27,6 +28,9 @@ def exclusiveTime(n, logs):
 
 # [3, 4]
 print(exclusiveTime(2, ["0:start:0", "1:start:2", "1:end:5", "0:end:6"]))
+# [8]
+print(exclusiveTime(1, ["0:start:0", "0:start:2",
+      "0:end:5", "0:start:6", "0:end:6", "0:end:7"]))
 
 # code explanation:
 # 1. create a stack and a response list of size n
