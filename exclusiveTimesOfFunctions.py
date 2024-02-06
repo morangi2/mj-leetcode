@@ -4,7 +4,7 @@ def exclusiveTime(n, logs):
     :type logs: List[str]
     :rtype: List[int]
     """
-    stack = []
+    stack = []  # a list used as a stack data structure
     response = [0] * n
 
     for log in logs:
@@ -34,6 +34,8 @@ print(exclusiveTime(2, ["0:start:0", "1:start:2", "1:end:5", "0:end:6"]))
 # 3. split the log into the function id, the function name and the current time
 # 4. if the function name is "start", push the function id and the current time to the stack
 # 5. if the function name is "end" and the function id is the same as the last function id in the stack
+# [-1] == the last element in the stack. In python, -ve indices count from the end of the list
+# [0] == the first element in the tuple i.e. fId
 # 6. pop the last function id and the insert time from the stack
 # 7. calculate the time taken by subtracting the current time from the insert time and adding 1
 # 8. add the time taken to the response list at the index of the function id
