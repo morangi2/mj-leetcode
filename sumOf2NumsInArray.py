@@ -6,6 +6,8 @@ def twoSumBruteForce(nums, target):
 
 
 print(twoSumBruteForce([11, 15, 2, 7], 9))  # [0, 1]
+# space complexity: O(1)
+# time complexity: O(n^2)
 
 
 def twoSumOptimized(nums, target):
@@ -19,3 +21,5 @@ def twoSumOptimized(nums, target):
 
 
 print(twoSumBruteForce([11, 15, 2, 7], 9))  # [0, 1]
+# space complexity: O(n) ... because the function uses a dictionary to store the elements of the list
+# time complexity: O(n) ... because the function iterates through the list once
