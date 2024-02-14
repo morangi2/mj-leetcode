@@ -13,6 +13,18 @@ def wordCount(input_string):
         # call .get() method on the dict to get the value of the key, if the key is not in the dict, return 0
         output_dict[one_word] = output_dict.get(one_word, 0) + 1
 
+        """
+        another way to write the above line is:
+        if one_word in output_dict:
+            output_dict[one_word] += 1
+        else:
+            output_dict[one_word] = 1
+
+        OR
+        output_dict.getDefault(one_word, 0)
+        output_dict[one_word] += 1
+        """
+
     return output_dict
 
 
