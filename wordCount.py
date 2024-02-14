@@ -16,5 +16,7 @@ def wordCount(input_string):
     return output_dict
 
 
+# {'this': 1, 'is': 1, 'a': 1, 'sample': 2, 'sentence': 2, 'repeated': 1}
 print(wordCount("This is a sample sentence. Sentence and sample are repeated."))
+# {'quick': 1, 'brown': 1, 'fox': 1, 'jumps': 1, 'over': 1, 'lazy': 1, 'dog': 2, 'barks': 1, 'loudly': 1}
 print(wordCount("The quick brown fox jumps over the lazy dog. The dog barks loudly."))
