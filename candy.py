@@ -19,3 +19,14 @@ print(candy([1, 2, 2]))  # 4
 print(candy([1, 2, 3, 4, 5]))  # 15
 
 # The time complexity is O(n) and the space complexity is O(n).
+
+# problem statement:
+"""
+There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.
+
+You are giving candies to these children subjected to the following requirements:
+
+Each child must have at least one candy.
+Children with a higher rating get more candies than their neighbors.
+Return the minimum number of candies you need to have to distribute the candies to the children.
+"""
