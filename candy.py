@@ -7,7 +7,7 @@ def candy(ratings):
         if ratings[i] > ratings[i-1]:
             candies[i] = candies[i-1] + 1
 
-    for i in range(n-2, -1, -1):
+    for i in range(n-3, -1, -1):
         if ratings[i] > ratings[i + 1]:
             candies[i] = max(candies[i], candies[i+1] + 1)
 
@@ -17,6 +17,7 @@ def candy(ratings):
 print(candy([1, 0, 2]))  # 5
 print(candy([1, 2, 2]))  # 4
 print(candy([1, 2, 3, 4, 5]))  # 15
+print(candy([10, 2, 4, 2, 6, 1, 7, 8, 9, 2, 1]))  # 26
 
 # The time complexity is O(n) and the space complexity is O(n).
 
