@@ -24,7 +24,7 @@ def selection_sort(arr):
 
         for j in range(i + 1, n):
             if arr[j] < arr[min_index]:
-                min_index = j
+                min_index = j  # update the index in the loop and update the values at the end/outside of the loop
 
         arr[i] = arr[min_index]
         arr[min_index] = temp_min_val
