@@ -19,7 +19,7 @@ def insertion_sort(arr):
         key = arr[i]  # store the key in a variable
         j = i - 1  # let j loop through the array, starting from element on the left of the key
 
-        # loop through the array from the key to the beginning
+        # loop through the array from the key to the beginning, i is the outer boundary to prevent IndexOutOfRange error
         while j >= 0 and arr[j] > key:
             # keep moving elements to the right and decrement j and swap the 2 current values, until the condition is false
             arr[j+1] = arr[j]
