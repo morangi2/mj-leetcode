@@ -3,6 +3,8 @@
 # time complexity: O(n^2)
 # space complexity: O(1)
 # In-place: Yes
+# works with min_index and temp_min_val from left --> right, swap the indexes in inner loop and swap the values at the end/outside of the loop
+
 # Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end.
 # Initially, the sorted part is empty and the unsorted part is the entire list.
 # The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes a part of the sorted array.
