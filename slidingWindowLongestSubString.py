@@ -14,10 +14,15 @@ def lengthOfLongestSubString(s):
             # every time we find a repetition we set the starting point to the character next to the last occurrence.
             start_window = last_seen_index + 1
 
+            # update the value of the longest substring
             if current_length > longest:
                 longest = current_length
 
-        seen[s[i]] = i
+            # update the value of the last seen index
+            seen[s[i]] = i
+        else:
+            # it's not in the current window and not in the seen dictionary, so add it to the seen dictionary
+            seen[s[i]] = i
 
     if longest == 0:
         return n
