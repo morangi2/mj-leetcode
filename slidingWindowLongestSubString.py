@@ -5,13 +5,14 @@ def lengthOfLongestSubString(s):
     n = len(s)
 
     for i in range(n):
-        index = seen.get(s[i])
+        last_seen_index = seen.get(s[i])
 
-        if index is not None and index >= start_window:  # check to see it's in the current window too
+        # check to see it's in the current window too
+        if last_seen_index is not None and last_seen_index >= start_window:
             # calculate length of current substring
             current_length = i - start_window
             # every time we find a repetition we set the starting point to the character next to the last occurrence.
-            start_window = index + 1
+            start_window = last_seen_index + 1
 
             if current_length > longest:
                 longest = current_length
