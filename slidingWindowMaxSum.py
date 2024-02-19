@@ -82,7 +82,7 @@ def maxSumSubArray(arr, k):
             max_sum = max(max_sum, current_sum)
             # subtract the value of the first element from the current window
             # subtract before you loop to the next item in the arr cz then the next loop will have 1 unneeded value in the window
-            current_sum = current_sum - arr[i - (window_size - 1)]  
+            current_sum = current_sum - arr[i - (window_size - 1)]
 
     return max_sum
 
