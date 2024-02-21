@@ -32,10 +32,6 @@ Q: SMALLEST sub-array with a given sum == DYNAMIC sliding window
 
 import math
 
-s = {"m": 1, "e": 1}
-spec = s.get("m")
-print(spec)
-
 
 def smallestSubArraySum(arr, input_sum):
     start_window = 0
@@ -62,3 +58,7 @@ print(smallestSubArraySum([4, 2, 2, 7, 8, 1, 2, 8, 10], 8))  # 1
 print(smallestSubArraySum([4, 2, 2, 7, 8, 1, 2, 8, 10], 100))  # 0
 print(smallestSubArraySum([4, 2, 2, 7, 8, 1, 2, 8, 10], 10))  # 1
 print(smallestSubArraySum([4, 2, 2, 7, 8, 1, 2, 8, 10], 12))  # 2
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+# This is a DYNAMIC sliding window algorithm

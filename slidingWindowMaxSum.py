@@ -89,3 +89,7 @@ def maxSumSubArray(arr, k):
 
 print(maxSumSubArray([4, 2, 1, 7, 8, 1, 2, 8, 1, 0], 3))  # 16
 print(maxSumSubArray([4, 2, 1, 7, 8, 1, 2, 8, 1, 0, 3], 3))  # 19
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+# This is a DYNAMIC sliding window algorithm

@@ -39,4 +39,4 @@ def insertion_sort(arr):
     return arr
 
 
-print(insertion_sort([4, 3, 2, 10, 12, 1, 5, 6]))
+print(insertion_sort([4, 3, 2, 10, 12, 1, 5, 6]))  # [1, 2, 3, 4, 5, 6, 10, 12]

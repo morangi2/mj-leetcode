@@ -18,6 +18,9 @@ def bubble_sort(arr):
     n = len(arr)
 
     for i in range(n):
+        # n - 1 - i is to prevent the loop from going out of range ...
+        # loops from the end of the array to the beginning eg 0-3, 0-2, 0-1, 0-0
+        # this way, the values in the far right are sorted first i.e. bubbled to the end
         for j in range(n - 1 - i):
             if arr[j] > arr[j + 1]:
 
