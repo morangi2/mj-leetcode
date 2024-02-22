@@ -13,26 +13,26 @@ class ListNode(object):
 # add the remaining elements of list1 or list2 to the merged list
 # return the merged list
 
+    def merge2SortedLists(list1, list2):
+        current = head = ListNode(0)
 
-def merge2SortedLists(list1, list2):
-    head = ListNode()
-    current = head
-    while list1 and list2:
-        if list1.val < list2.val:
-            current.next = list1
-            list1 = list1.next
-        else:
-            current.next = list2
-            list2 = list2.next
+        while list1 and list2:  # while list1 and list2 are not empty
+            if list1.val < list2.val:  # compare the first elements of list1 and list2
+                current.next = list1  # add the smaller of the two to the merged list
+                list1 = list1.next  # move the current pointer of list1 to the next element
+            else:
+                current.next = list2
+                list2 = list2.next
 
-        current = current.next
+            current = current.next  # move the current pointer of the merged list to the next element
 
-    current.next = list1 or list2
+        # add the remaining elements of list1 or list2 to the merged list
+        current.next = list1 or list2
 
-    return head.next
+        return head.next  # return the merged list head is 0, so we return head.next, and head is the merged list equivalent to current pointer
 
 # Time complexity: O(n + m)
 # Space complexity: O(1)
 
 
-print(merge2SortedLists([1, 2, 4], [1, 3, 4]))  # [1, 1, 2, 3, 4, 4]
+print(ListNode.merge2SortedLists([1, 2, 4], [1, 3, 4]))  # [1, 1, 2, 3, 4, 4]
