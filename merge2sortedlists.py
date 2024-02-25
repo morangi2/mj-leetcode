@@ -29,7 +29,7 @@ class ListNode(object):
         # add the remaining elements of list1 or list2 to the merged list
         current.next = list1 or list2
 
-        return head.next  # return the merged list head is 0, so we return head.next, and head is the merged list equivalent to current pointer
+        return head.next  # return the merged list head is 0, so we return head.next, and head is the merged list equivalent to current
 
 # Time complexity: O(n + m)
 # Space complexity: O(1)
