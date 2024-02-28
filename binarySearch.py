@@ -21,7 +21,29 @@ def binarySearch(nums, target):
 # if the mid point is less that the tartget, adjust the left pointer to mid + 1
 # if the mid point is greater than the target, adjust the right pointer to mid - 1
 # if the target is not found, return -1
+# COMPLEXITY: O(log n) time complexity because the search space is halved at each iteration and O(1) space complexity because we are not using any extra space
 
 
 print(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 5))  # 4
 print(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 10))  # -1
+
+
+def binarySearchRecursive(nums, target):
+    left_pointer = 0
+    right_pointer = len(nums) - 1
+
+    while left_pointer <= right_pointer:
+        mid = (left_pointer + right_pointer) // 2
+
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            return binarySearchRecursive(nums[mid + 1:], target)
+        else:
+            return binarySearchRecursive(nums[:mid-1], target)
+
+    return -1
+
+
+print(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7, 8, 9], 5))  # 4
+print(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7, 8, 9], 10))  # -1
