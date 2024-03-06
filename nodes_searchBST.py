@@ -18,7 +18,7 @@ def search(root, key):
         # check the right side recursively
         return search(curr_node.right, key)
 
-    elif curr_node.data > key:
+    else:
         # search the left side of node
         return search(curr_node.left, key)
 
