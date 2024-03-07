@@ -20,8 +20,8 @@ Becomes:
 
 
 def setMatrixZeros(matrix):
-    rows = set()
-    cols = set()
+    rows = set()  # stores the index of rows with zeros
+    cols = set()  # stores the index of columns with zeros
 
     print(matrix)
 
@@ -69,6 +69,8 @@ Time complexity: O(n * m) where n is the number of rows and m is the number of c
 
 m1 = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
 m2 = [[1, 2, 3], [4, 0, 6], [7, 8, 4]]
+m4 = [[1, 2, 3], [4, 0, 6], [7, 8, 0]]
 
 print(setMatrixZeros(m1))  # [[1, 2, 0], [4, 5, 0], [0, 0, 0]]
 print(setMatrixZeros(m2))  # [[1, 0, 3], [0, 0, 0], [7, 0, 4]]
+print(setMatrixZeros(m4))  # [[1, 0, 0], [0, 0, 0], [0, 0, 0]]
