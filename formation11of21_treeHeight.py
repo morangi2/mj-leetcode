@@ -47,6 +47,8 @@ def treeHeightRecursive(root):
     result = 1 + max(lSide, rSide)
 
     return result
+# Time complexity: O(n) ... we visit each node once
+# Space complexity: O(h) ... the height of the tree
 
 
 def treeHeight(root):
@@ -78,6 +80,9 @@ def treeHeight(root):
         count += 1
 
     return count
+
+# Time complexity: O(n) ... we visit each node once
+# Space complexity: O(m) ... the max number of nodes at a level in the tree
 
 # test cases
 #       1
