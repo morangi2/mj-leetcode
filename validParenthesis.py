@@ -8,6 +8,7 @@ eg "((" false
 
 "()()()" true
 
+Using a stack is an option but it takes a O(n) space complexity, below altern. is O(1)
 """
 
 
