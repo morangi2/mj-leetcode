@@ -18,4 +18,4 @@ def isAnagram(s, t):
     return is_anagram
 
 
-print(isAnagram("anagram", "nagaram"))
+print(isAnagram("anagram", "nagaram"))  

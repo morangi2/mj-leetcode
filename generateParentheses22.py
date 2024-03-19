@@ -30,6 +30,9 @@ Output: ["()"]
             - eg stack.append((left, right + 1, s + ')' ))
 - return result
 
+Time complexity: O(4^n / sqrt(n)) because we have 2n total parentheses and we have 2 choices for each parentheses
+Space complexity: O(4^n / sqrt(n)) because we have 2n total parentheses and we have 2 choices for each parentheses
+
 """
 
 
@@ -37,12 +40,13 @@ def generateParenthesis(n):
     left, right = 0, 0
     result = []
     s = ''
+    # stack of tuples to store the current string and the left and right parentheses
     stack = [(left, right, s)]
 
     while stack:
         left, right, s = stack.pop()
 
-        if len(s) == n * 2:
+        if len(s) == n * 2:  # if the length of the string is equal to 2n because we have n pairs of parentheses
             result.append(s)
 
         if left < n:  # start with left to make it valid parenthesis

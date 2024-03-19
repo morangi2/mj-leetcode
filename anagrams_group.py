@@ -65,6 +65,9 @@ def groupAnagrams(strs):
 
     return res
 
+# Time complexity: O(n * k log k) because we have n strings and we sort each string of length k
+# Space complexity: O(n * k) because we have n strings and we store the sorted strings in the dictionary
+
 
 # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 print(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
